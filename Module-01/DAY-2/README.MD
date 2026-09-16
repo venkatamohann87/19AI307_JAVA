@@ -1,20 +1,33 @@
-# Ex.No:1(B) VARIABLES AND OPERATOR
+# Ex.No:1(B) CONDITIONAL STATEMENT
+
+## QUESTION:
+In a magical building, an elevator behaves oddly:
+
+If the floor number is divisible by 3 and 5, it skips that floor.
+ac
+If the floor number is divisible by 3 only, it says "Beware!".
+
+If the floor number is divisible by 5 only, it says "Blessings!".
+
+Otherwise, it announces the floor number.
+
+Write a Java program to simulate this elevator logic for a given floor number.
 
 ## AIM:
-To write a Java program to get values of variables 'a' and 'b' and then check if both the conditions 'a < 50' and 'a < b' are true. [Class name is ‘Demo’]
+To write a Java program to simulate this elevator logic for a given floor number.
 
 ## ALGORITHM :
 1.	Start the program.
-2.	Import the necessary package 'java.util'
-3.	Define a class named 'Demo'
-4.	Implement the main method
-5.	Create a new instance of the 'Scanner' class named 'sc' to read user input
-6.	Read an integer 'a' from the user using the 'nextInt' method of 'sc'
-7.	Read another integer 'b' from the user using the 'nextInt' method of 'sc'
-8.	Check if 'a' is less than 50 or if 'a' is less than 'b'
-a)	If the condition is true, print "true" using the 'print' method of 'System.out'
-b)	If the condition is false, print "false" using the 'print' method of 'System.out'
-9.	End
+
+2. Import the package java.util.*.
+
+3. Create a Scanner object and read an integer n.
+
+4. If n is divisible by both 3 and 5, print "Skipped".
+
+5. Else if divisible by 3, print "Beware!"; if divisible by 5, print "Blessings!".
+
+6. Otherwise, print "Floor " followed by n and end the program.
 
 
 
@@ -23,23 +36,55 @@ b)	If the condition is false, print "false" using the 'print' method of 'System.
 ## PROGRAM:
  ```
 /*
-Program to implement a variable and operators using Java
-Developed by: 
-RegisterNumber:  
+Program to implement a conditional statement using Java
+Developed by: Venkata Mohan N
+RegisterNumber: 212224230298
+
+
 */
 ```
 
-## Sourcecode.java:
+## SOURCE CODE:
 
 
+```
+import java.util.Scanner;
 
+public class ExamRoomAllotment {
+    public static void main(String[] args) {
+     
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        if(n%3==0 &&n%5==0)
+        {
+            System.out.print("Skipped");
+        }
+        else if(n%3==0)
+        {
+            System.out.print("Beware!");
+        }
+        else if(n%5==0)
+        {
+            System.out.print("Blessings!");
+        }
+        else
+        {
+            System.out.print("Floor "+n);
+        }
+    }
+}
+ 
+```
 
 
 
 
 ## OUTPUT:
+<img width="479" height="388" alt="image" src="https://github.com/user-attachments/assets/e2a1b0e9-5456-46b8-a7c6-dfe62151a4a5" />
 
 
 
 ## RESULT:
-Thus, the Java program to get values of variables 'a' and 'b' and then check if both the conditions 'a < 50' and 'a < b' are true is created successfully.
+The program successfully writes a Java program to simulate this elevator logic for a given floor number.
+
+
